@@ -5,24 +5,25 @@ public class Circle extends Shape{
     private int radius;
     private double pi = 3.14;
 
-    public Circle(Point center, int radius){
-        super();
+    public Circle(String name, Point center, int radius) {
+        super(name);
         this.center = center;
         this.radius = radius;
     }
 
-    public void getCenter(){
-        System.out.println("The center of this circle is: " + center);
+
+    @Override
+    double calculateArea() {
+        return pi * (radius*radius);
     }
 
     @Override
-    public void getArea(){
-        double area = pi * (radius*radius);
-        System.out.println("The area of this circle is: " + area);
+    Point calculateCenter() {
+        return center;
     }
 
-    public void getCircumference(){
-        double circumference = radius*2 * pi;
-        System.out.println("The circumference of this circle is: " + circumference);
+    @Override
+    double calculateCircumference() {
+        return radius*2 * pi;
     }
 }

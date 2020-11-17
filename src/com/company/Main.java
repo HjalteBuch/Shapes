@@ -4,24 +4,13 @@ package com.company;
 public class Main {
 
     public static void main(String[] args) {
-        Point center = new Point(20,20);
-        Shape circle = new Circle(center, 10);
-        circle.getArea();
-        circle.getCenter();
-        circle.getCircumference();
-
-        Shape rectangle = new Rectangle(center,10,10);
-        rectangle.getArea();
-        rectangle.getCenter();
-        rectangle.getCircumference();
-
-        Point p1 = new Point(4,1);
-        Point p2 = new Point(2,1);
-        Point p3 = new Point(0,2);
-
-        Shape triangle = new Triangle(p1, p2, p3);
-        triangle.getArea();
-        triangle.getCenter();
-        triangle.getCircumference();
+        Shape shapes[] = {
+                new Circle("Circle", new Point(2,1), 3),
+                new Rectangle("Rectangle", new Point(4,5),5,8),
+                new Triangle("Triangle", new Point(10,10), new Point(8,15), new Point(12, 15))
+        };
+        for(int i = 0; i < shapes.length; i++){
+            System.out.println(shapes[i]);
+        }
     }
 }

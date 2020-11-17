@@ -1,19 +1,26 @@
 package com.company;
 
 abstract public class Shape {
+    String name;
 
-
-    public void getCenter(){
-        System.out.println("shape center");
+    public Shape(String name) {
+        this.name = name;
     }
 
-    public void getArea(){
-        System.out.println("shape area");
+    double calculateArea() {
+        return 0;
     }
 
-    public void getCircumference(){
-        System.out.println("shape circumference");
+    Point calculateCenter(){
+        return null;
     }
 
+    double calculateCircumference(){
+        return 0;
+    }
 
+    @Override
+    public String toString() {
+        return name + " has area: " + calculateArea() + ", center: " + calculateCenter() + ", circumference: " + calculateCircumference();
+    }
 }
