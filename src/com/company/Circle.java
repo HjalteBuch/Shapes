@@ -11,7 +11,6 @@ public class Circle extends Shape{
         this.radius = radius;
     }
 
-
     @Override
     double calculateArea() {
         return pi * (radius*radius);

@@ -12,10 +12,5 @@ public class Main {
         for(int i = 0; i < shapes.length; i++){
             System.out.println(shapes[i]);
         }
-
-        Triangle triangle = new Triangle("Triangle", new Point(10,10), new Point(15,5), new Point(7, 57));
-        System.out.println(triangle.getSideA());
-        System.out.println(triangle.getSideB());
-        System.out.println(triangle.getSideC());
     }
 }
